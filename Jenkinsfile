@@ -3,13 +3,10 @@ pipeline
     agent none
     stages
     {
-        stage('Checkout stage ')
+        stage('Non-parallel stage ')
         {
-            steps
-            {
-                agent {label "master"}
-                steps { git 'https://github.com/yoongzeng/jenkinsapp.git'}
-            }
+            agent {label "master"}
+            steps { git 'https://github.com/yoongzeng/jenkinsapp.git'}
         }
         stage('Build')
         {
