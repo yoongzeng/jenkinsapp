@@ -19,12 +19,12 @@ pipeline
             {
                 stage('Test1 on master')
                 {
-                    agent {label " master"}
+                    agent {label "master"}
                     steps {bat'Testing.bat' }
                 }
                 stage('Test2 on slave machine')
                 {
-                    agent {label " WS"}
+                    agent {label "master"}
                     steps {echo "tested on slave machine" }
                 }
             }
