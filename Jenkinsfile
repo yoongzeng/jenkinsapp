@@ -7,7 +7,8 @@ pipeline
         {
             steps
             {
-                checkout scm
+                agent {label "master"}
+                steps { git 'https://github.com/yoongzeng/jenkinsapp.git'}
             }
         }
         stage('Build')
