@@ -24,7 +24,7 @@ pipeline
                 }
                 stage('Test2 on slave machine')
                 {
-                    agent {label "master"}
+                    agent {label "WS"}
                     steps {echo "tested on slave machine" }
                 }
             }
